@@ -35,3 +35,12 @@ Parts :
 
 Compass + Magnetometer 
 https://robu.in/product/neo-m8n-gps-module-with-compass-for-apm-with-extra-connector-for-pixhawk/?gad_source=1&gclid=Cj0KCQjwhr6_BhD4ARIsAH1YdjCiHruGafm09o5HS7BqHD2L9rpcpM2PyedD7UM3gGwTHtP7ow6QnnIaAmBTEALw_wcB
+
+
+
+# Transmitter  [ RPi Pico based]
+
+![alt text](Transmitter.jpg)
+
+# Receiver [ Rpi 4 based]
+![alt text](Receiver.jpg)
