@@ -49,8 +49,8 @@ class HMC5883L:
     xb=0
     yb=0
     
-    def __init__(self, scl=15, sda=14, address=0x1e, gauss='1.9', declination=(0, 0)):
-        self.i2c = i2c = machine.SoftI2C(scl=machine.Pin(scl), sda=machine.Pin(sda), freq=15000)
+    def __init__(self, i2c, address=0x1e, gauss='1.9', declination=(0, 0)):
+        self.i2c = i2c
 
         # Initialize sensor.
         i2c.start()
@@ -122,11 +122,14 @@ class HMC5883L:
         return 'X: {:.4f}, Y: {:.4f}, Z: {:.4f}, Heading: {}° {}′ '.format(x, y, z, degrees, minutes)
     
     
-hmc5883l = HMC5883L(3,2)
 
-while(True):
-    x, y, z = hmc5883l.read()
-    degrees, minutes = hmc5883l.heading(x,y)
-    print(degrees, minutes)
+
+if __name__ == "__main__":
+    hmc5883l = HMC5883L(3,2)
+    while(True):
+        x, y, z = hmc5883l.read()
+        degrees, minutes = hmc5883l.heading(x,y)
+        print(degrees, minutes)
     
     
+
